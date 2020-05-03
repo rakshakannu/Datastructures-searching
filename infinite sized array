@@ -1,0 +1,15 @@
+int findininfarr(int arr[], int x)
+{
+  if(arr[0]==x)
+    return 0;
+  int i=1;
+  while(arr[i]<=x)
+    i=i*2;
+  if(arr[i]==x)
+    return ;
+  else
+    return binarysearch(arr,i/2,i); //use binary search algorithm
+    
+}
+
+// will take O(log(i)) time not O(log(n)).
