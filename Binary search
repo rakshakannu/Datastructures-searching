@@ -1,0 +1,19 @@
+// always write the proper base case for binary search
+
+//RECURSIVE CODE
+
+bool binaryearch( int arr[],int l, int h, int x)
+{
+	if(low>high)
+		return -1; // BASE CASE
+	int mid=l+(h-l)/2; // there is a possibility of overflow using mid=(l+h)/2
+	if(arr[mid]==x)
+		return mid;
+	if(arr[mid]>x)
+		return binarysearch(arr,l,mid-1,x);
+	else
+		return binarysearch(arr,mid+1,h,x);
+}
+
+//ITERATIVE CODE is also possible
+
