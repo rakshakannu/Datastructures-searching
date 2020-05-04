@@ -1,0 +1,10 @@
+// naive solution - run three loops [O(n cube)]
+
+// best solution (using ispair function [also called two pointer approach]) [O(n square)]
+
+for(int i=0;i<n;i++)
+  if(ispair(arr,i+1,n-1,sum-a[i])
+    return true;
+return false;
+
+// hashing can also give O(n square) but is complicated as it requires hash computations
