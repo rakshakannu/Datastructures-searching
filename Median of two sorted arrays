@@ -1,0 +1,12 @@
+// naive solution
+
+add both arrays to new array temp, sort the array, find the median [O(n1+n2)*log(n1+n2)]
+
+// efficient solution using binary search (n1<=n2 only) [Olog(n1)]
+
+i2 = (n1+n2+1)/2 - i1
+
+* didn't understand the algorithm *
+
+
+
