@@ -1,0 +1,17 @@
+class solution
+{
+  Static int ispresent( int arr[], int n, sum)
+  {
+    int l=0; h=n-1;
+    while(l<=h)
+    {
+      if(arr[l]+arr[h]==sum)
+        return 1;
+      else if(arr[l]+arr[h]>sum)
+        h--;
+      else
+        l++;
+    }
+  }
+  return 0;
+}
