@@ -1,0 +1,44 @@
+// an element is called majority if the number of times the element present in the array is strictly more than n/2 wheren is 
+the size of the array
+
+// naive solution O[n square]
+
+int findmajority( int arr[], int n)
+{
+  for(int i=0;i<n;i++)
+  {
+    int count=0;
+    for(int j=i+1;j<n;j++)
+      if(arr[i]=arr[j])
+        count++;
+    if(count>n/2)
+      return i;
+  }
+  return -1;
+}
+
+// best solution O[n]
+(will not return the first majority element present in the array)
+
+int findmajority( int arr[], int n)
+{
+  int res=0, count =1;
+  for(int i=0;i<n;i++)
+    if(arr[res]==arr[i])
+      count++;
+    else
+      count--;
+    if(count==0)
+    {
+      res=i;
+      count=1 // resetting
+    }
+}
+
+count=0;
+for(inti=0;i<n;i++)
+  if(arr[res]==arr[i])
+    count++;
+  if(count<=n/2)
+    res=-1;
+  return res;
