@@ -17,3 +17,10 @@ bool binaryearch( int arr[],int l, int h, int x)
 
 //ITERATIVE CODE is also possible
 
+// ANALYSIS OF BINARY SEARCH ALGORITHM
+
+//successful search
+maximum no of iterations = height of the binary tree = log2(n) = time complexity
+
+// unsuccessful search
+theta(log2(n))
