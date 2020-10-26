@@ -1,3 +1,5 @@
+// TO USE THE TWO POINTER METHID, THE ARRAY HAS TO BE SORTED.
+
 class solution
 {
   Static int ispresent( int arr[], int n, sum)
