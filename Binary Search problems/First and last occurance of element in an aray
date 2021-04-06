@@ -1,0 +1,54 @@
+class GFG
+{
+    ArrayList<Long> find(long arr[], int n, int x)
+    {
+        int low=0;
+        int high = n-1;
+        long index1=-1;
+        long index2=-1;
+        
+        ArrayList<Long> ans = new ArrayList<Long>();
+        
+        while(low<=high){
+            
+            int mid = low + (high-low)/2;
+            
+            if(arr[mid]==x){
+                index1=mid;
+                high=mid-1;
+            }
+            
+            if(arr[mid]<x){
+                low = mid+1;
+            }else{
+                high = mid-1;
+            }
+            
+        }
+        
+        low=0;
+        high = n-1;
+        
+        while(low<=high){
+            
+            int mid = low + (high-low)/2;
+            
+            if(arr[mid]==x){
+                index2=mid;
+                low=mid+1;
+            }else if(arr[mid]<x){
+                low = mid+1;
+            }else{
+                high = mid-1;
+            }
+            
+        }
+        
+        ans.add(index1);
+        ans.add(index2);
+        
+        return ans;
+        
+        // code here
+    }
+}
